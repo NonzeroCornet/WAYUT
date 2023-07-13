@@ -1,0 +1,361 @@
+<!-- WAYUT (why-uh-t) Made by Brian Dean Ullery -->
+<!-- GitHub: https://github.com/NonzeroCornet/FNAFBrowser -->
+<title>What are you up to?</title>
+<link rel="shortcut icon" href="images/Symbol-Only.png" />
+<style>
+  .btn {
+    background: lime;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+  }
+
+  .logo {
+    width: 268px;
+    filter: brightness(0.5);
+    transition: all 1s;
+    cursor: pointer;
+  }
+
+  .ship {
+    border: 5px solid grey;
+    width: 268px;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 5px;
+    border-radius: 12px;
+  }
+
+  body {
+    background: radial-gradient(
+      circle,
+      rgba(31, 31, 31, 1) 0%,
+      rgba(22, 22, 22, 1) 50%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    margin-top: 2px;
+  }
+
+  center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  input {
+    text-align: center;
+  }
+</style>
+
+<body>
+  <center>
+    <div class="ship">
+      <img
+        id="magellan"
+        src="images/2-Inch-MagellanW.png"
+        class="logo"
+        title="activate-ship"
+        onclick="shipToggle(this)"
+      /><br />
+      <btn
+        data-img="images/clicky.png"
+        data-ship="magellan"
+        data-name="clicker"
+      ></btn>
+
+      <btn
+        data-img="images/toilet_1f6bd.png"
+        data-ship="magellan"
+        data-name="toilet"
+      ></btn>
+
+      <btn
+        data-img="images/exit_door_fire_man_escape-512.png"
+        data-ship="magellan"
+        data-name="away-mission"
+      ></btn>
+
+      <btn
+        data-img="images/man-raising-hand-icon.png"
+        data-ship="magellan"
+        data-name="volunteer-request"
+      ></btn>
+      <input
+        type="text"
+        id="magellan-notes"
+        style="width: 100%"
+        onkeyup="updateText(this)"
+      />
+    </div>
+    <div class="ship">
+      <img
+        id="cassini"
+        src="images/Cassini-Logo-White.png"
+        class="logo"
+        title="activate-ship"
+        onclick="shipToggle(this)"
+      /><br />
+      <btn
+        data-img="images/clicky.png"
+        data-ship="cassini"
+        data-name="clicker"
+      ></btn>
+
+      <btn
+        data-img="images/toilet_1f6bd.png"
+        data-ship="cassini"
+        data-name="toilet"
+      ></btn>
+
+      <btn
+        data-img="images/exit_door_fire_man_escape-512.png"
+        data-ship="cassini"
+        data-name="away-mission"
+      ></btn>
+
+      <btn
+        data-img="images/man-raising-hand-icon.png"
+        data-ship="cassini"
+        data-name="volunteer-request"
+      ></btn>
+      <input
+        type="text"
+        id="cassini-notes"
+        style="width: 100%"
+        onkeyup="updateText(this)"
+      />
+    </div>
+    <div class="ship">
+      <img
+        id="phoenix"
+        src="images/Phoenix-Logo-White.png"
+        class="logo"
+        title="activate-ship"
+        onclick="shipToggle(this)"
+      /><br />
+      <btn
+        data-img="images/clicky.png"
+        data-ship="phoenix"
+        data-name="clicker"
+      ></btn>
+
+      <btn
+        data-img="images/toilet_1f6bd.png"
+        data-ship="phoenix"
+        data-name="toilet"
+      ></btn>
+
+      <btn
+        data-img="images/exit_door_fire_man_escape-512.png"
+        data-ship="phoenix"
+        data-name="away-mission"
+      ></btn>
+
+      <btn
+        data-img="images/man-raising-hand-icon.png"
+        data-ship="phoenix"
+        data-name="volunteer-request"
+      ></btn>
+      <input
+        type="text"
+        id="phoenix-notes"
+        style="width: 100%"
+        onkeyup="updateText(this)"
+      />
+    </div>
+    <div class="ship">
+      <img
+        id="odyssey"
+        src="images/Odyssey-Logo-White.png"
+        class="logo"
+        title="activate-ship"
+        onclick="shipToggle(this)"
+      /><br />
+      <btn
+        data-img="images/clicky.png"
+        data-ship="odyssey"
+        data-name="clicker"
+      ></btn>
+
+      <btn
+        data-img="images/toilet_1f6bd.png"
+        data-ship="odyssey"
+        data-name="toilet"
+      ></btn>
+
+      <btn
+        data-img="images/exit_door_fire_man_escape-512.png"
+        data-ship="odyssey"
+        data-name="away-mission"
+      ></btn>
+
+      <btn
+        data-img="images/man-raising-hand-icon.png"
+        data-ship="odyssey"
+        data-name="volunteer-request"
+      ></btn>
+      <input
+        type="text"
+        id="odyssey-notes"
+        style="width: 100%"
+        onkeyup="updateText(this)"
+      />
+    </div>
+    <div class="ship">
+      <img
+        id="galileo"
+        src="images/Galileo-White-Logo.png"
+        class="logo"
+        title="activate-ship"
+        onclick="shipToggle(this)"
+      /><br />
+      <btn
+        data-img="images/clicky.png"
+        data-ship="galileo"
+        data-name="clicker"
+      ></btn>
+
+      <btn
+        data-img="images/toilet_1f6bd.png"
+        data-ship="galileo"
+        data-name="toilet"
+      ></btn>
+
+      <btn
+        data-img="images/exit_door_fire_man_escape-512.png"
+        data-ship="galileo"
+        data-name="away-mission"
+      ></btn>
+
+      <btn
+        data-img="images/man-raising-hand-icon.png"
+        data-ship="galileo"
+        data-name="volunteer-request"
+      ></btn>
+      <input
+        type="text"
+        id="galileo-notes"
+        style="width: 100%"
+        onkeyup="updateText(this)"
+      />
+    </div>
+    <div class="ship">
+      <img
+        id="falcon"
+        src="images/Falcon-White.png"
+        class="logo"
+        title="activate-ship"
+        onclick="shipToggle(this)"
+      /><br />
+      <btn
+        data-img="images/clicky.png"
+        data-ship="falcon"
+        data-name="clicker"
+      ></btn>
+
+      <btn
+        data-img="images/toilet_1f6bd.png"
+        data-ship="falcon"
+        data-name="toilet"
+      ></btn>
+
+      <btn
+        data-img="images/exit_door_fire_man_escape-512.png"
+        data-ship="falcon"
+        data-name="away-mission"
+      ></btn>
+
+      <btn
+        data-img="images/man-raising-hand-icon.png"
+        data-ship="falcon"
+        data-name="volunteer-request"
+      ></btn>
+      <input
+        type="text"
+        id="falcon-notes"
+        style="width: 100%"
+        onkeyup="updateText(this)"
+      />
+    </div>
+  </center>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    while (document.querySelectorAll("btn").length > 0) {
+      let btnTemplate = document.querySelectorAll("btn")[0];
+      let btn = document.createElement("img");
+      btn.setAttribute("class", "btn");
+      btn.src = btnTemplate.dataset.img;
+      btn.id = btnTemplate.dataset.ship + "-" + btnTemplate.dataset.name;
+      btn.setAttribute("onclick", "toggle(this)");
+      btn.title = btnTemplate.dataset.name;
+      btnTemplate.replaceWith(btn);
+    }
+
+    var socket = io();
+
+    socket.on("updateC", (id, color) => {
+      if (
+        id == "magellan" ||
+        id == "cassini" ||
+        id == "phoenix" ||
+        id == "odyssey" ||
+        id == "galileo" ||
+        id == "falcon"
+      ) {
+        document.getElementById(id).style.filter = color;
+      } else {
+        speechSynthesis.cancel();
+        var msg = new SpeechSynthesisUtterance();
+        msg.voice = window.speechSynthesis.getVoices()[4];
+        msg.rate = 1.2;
+        msg.pitch = 0;
+        msg.text = id;
+        msg.delay = 0;
+        speechSynthesis.speak(msg);
+        document.getElementById(id).style.background = color;
+      }
+    });
+
+    socket.on("shipData", (shipData) => {
+      for (let i = 0; i < Object.keys(shipData).length; i++) {
+        let id = Object.keys(shipData)[i];
+        let color = shipData[id];
+        if (id.split("-").length == 1) {
+          document.getElementById(id).style.filter = color;
+        } else if (color != "lime" && color != "red") {
+          document.getElementById(id).value = color;
+        } else {
+          document.getElementById(id).style.background = color;
+        }
+      }
+    });
+
+    socket.on("textData", (id, text) => {
+      document.getElementById(id).value = text;
+    });
+
+    function toggle(elem) {
+      elem.style.background == "red"
+        ? (elem.style.background = "lime")
+        : (elem.style.background = "red");
+      socket.emit("updateS", elem.id, elem.style.background);
+    }
+
+    function shipToggle(elem) {
+      elem.style.filter == "brightness(1)"
+        ? (elem.style.filter = "brightness(0.5)")
+        : (elem.style.filter = "brightness(1)");
+      socket.emit("updateS", elem.id, elem.style.filter);
+    }
+
+    function updateText(elem) {
+      socket.emit("updateTextS", elem.id, elem.value);
+    }
+  </script>
+</body>
