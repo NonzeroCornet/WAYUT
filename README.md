@@ -1,4 +1,4 @@
-# WAYUT
+# WAYUT (why-uh-t)
 This is a thingy I made for the Christa McAuliffe Space Center Flight Directors.
 
 ## Requirements
